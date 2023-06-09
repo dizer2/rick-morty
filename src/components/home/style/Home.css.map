@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAEA,CAAC;EACA,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;;AAGvB,IAAI;EACH,gBAAgB,ECRH,OAAO;;ACGrB,GAAG;EACF,KAAK,EDLM,OAAO",
-"sources": ["../../main/main.scss","../../main/variables.scss","Home.scss"],
+"mappings": "AAAQ,+HAAuH;ACE/H,CAAC;EACA,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;;AAGvB,IAAI;EACH,gBAAgB,ECPH,OAAO",
+"sources": ["../../main/mixin.scss","../../main/main.scss","../../main/variables.scss"],
 "names": [],
 "file": "Home.css"
 }

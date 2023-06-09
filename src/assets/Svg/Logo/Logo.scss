@@ -1,0 +1,45 @@
+@import "../../../components/main/variables.scss";
+@import "../../../components/main/mixin.scss";
+
+
+.logo{
+	z-index: 999;
+	&__img{
+		width: 300px;
+		cursor: pointer;
+		animation-name: logo ;
+		animation-duration: 1s;
+		animation-iteration-count: 1;
+		@keyframes logo {
+			0%{
+				opacity: 0;
+				@include transform(-50px, 0, 0)
+			}
+			100%{
+				opacity: 1;
+				@include transform(-0, 0, 0)
+			}
+		}
+	}
+
+	
+	&__fill{
+		fill: #FFFFFF;
+		@include transition(1000ms, 0.215, 0.610, 0.355, 1.000);
+	}
+	&__fill-active{
+		fill: $mainColor;
+		@include transition(1000ms, 0.215, 0.610, 0.355, 1.000);
+		transform: rotate(120deg); 
+	}
+
+	&__stroke{
+		fill: $mainColor;
+		@include transition(500ms, 0.175, 0.885, 0.320, 1.275);
+	}
+
+	&__stroke-active{
+		fill: $hoverColor;
+		@include transition(500ms, 0.175, 0.885, 0.320, 1.275);
+	}
+}

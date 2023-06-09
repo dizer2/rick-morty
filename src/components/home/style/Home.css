@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -5,8 +6,5 @@
 
 body {
   background-color: #4F545E; }
-
-div {
-  color: #B8F1FF; }
 
 /*# sourceMappingURL=Home.css.map */

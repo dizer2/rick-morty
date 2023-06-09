@@ -1,7 +1,4 @@
-@import "../../main/variables.scss";
+@import "../../main/variables.scss"; 
+@import "../../main/mixin.scss";
 @import "../../main/main.scss";
 
-
-div{
-	color: $mainColor;
-}

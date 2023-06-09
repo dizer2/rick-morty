@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap');
+
+@mixin font($color, $size, $weight, $line, $spacing, $top) {
+	font-family: 'Montserrat Alternates';
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: $line;
+	letter-spacing: $spacing;
+	color: $color;
+	margin-top: $top;
+	@if $color == 0 {
+		color: #fff;
+	}
+}
+
+@mixin display-center ($justify, $align){
+	@if $justify == 0 {
+		justify-content: flex-start;
+	}@else {
+		justify-content: $justify;
+	}
+	@if $align == 0 {
+		align-items: flex-start;
+	}@else {
+		align-items: $align;
+	}
+	display: flex;
+}
+
+@mixin transition ($duration, $duration1, $duration2, $duration3, $duration4){
+	transition: all $duration cubic-bezier($duration1, $duration2, $duration3, $duration4);
+	transition-timing-function: cubic-bezier($duration1, $duration2, $duration3, $duration4); 
+}
+
+@mixin transform ($left, $center, $rigth){
+	-webkit-transform: translate3d($left, $center, $rigth);
+	-ms-transform: translate3d($left, $center, $rigth);
+	transform: translate3d($left, $center, $rigth);
+}
