@@ -4,8 +4,8 @@
   margin: 0;
   box-sizing: border-box; }
 
-body {
-  background-color: #4F545E; }
+a {
+  text-decoration: none; }
 
 .header {
   width: 100%;

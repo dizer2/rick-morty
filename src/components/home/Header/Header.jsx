@@ -2,9 +2,10 @@ import React from 'react'
 import Logo from '../../../assets/Svg/Logo/Logo';
 import "../Header/Header.css"
 
-function Header() {
-    const navigation = ["Characters", "Episodes", "Location", "My watch list"];
+const navigation = ["Characters", "Episodes", "Location", "My watch list"];
     
+
+function Header() {
   return (
 	<div className='header'>
     <Logo />

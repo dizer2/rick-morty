@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+.main {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  overflow: hidden; }
+  .main .left__main {
+    width: 60%;
+    height: 100%;
+    padding: 100px 200px;
+    z-index: 90; }
+    .main .left__main .main__titel {
+      width: 570px;
+      font-family: 'Algerian';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 103.98%;
+      letter-spacing: 0;
+      color: 0;
+      margin-top: 0;
+      color: #fff;
+      -webkit-transition-delay: 300ms;
+      transition-delay: 300ms;
+      -webkit-transition: -webkit-transform 0.5s, opacity 0.2s;
+      -webkit-transition: transform 0.5s, opacity 0.2s;
+      transition: transform 0.5s, opacity 0.2s;
+      -webkit-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      animation-name: main__titel;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      opacity: 1; }
+@keyframes main__titel {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    -ms-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+      .main .left__main .main__titel::after {
+        content: ".";
+        color: #AFFE2D;
+        margin-left: 10px; }
+    .main .left__main .main__desciption {
+      width: 550px;
+      font-family: 'Montserrat Alternates';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: #C7C7C7;
+      margin-top: 0;
+      -webkit-transition-delay: 300ms;
+      transition-delay: 300ms;
+      -webkit-transition: -webkit-transform 0.5s, opacity 0.2s;
+      -webkit-transition: transform 0.5s, opacity 0.2s;
+      transition: transform 0.5s, opacity 0.2s;
+      -webkit-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      margin-top: 15px;
+      animation-name: main__desciption;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      opacity: 1; }
+@keyframes main__desciption {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    -ms-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+    .main .left__main .main__button {
+      width: 214px;
+      height: 66px;
+      font-family: 'Algerian';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 103.98%;
+      letter-spacing: 0;
+      color: #4F545E;
+      margin-top: 65px;
+      transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0px 6px 8px rgba(184, 241, 255, 0.3);
+      background: #B8F1FF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer; }
+      .main .left__main .main__button::after {
+        content: '';
+        width: 45px;
+        height: 45px;
+        background: #B8F1FF;
+        position: absolute;
+        margin-left: 190px;
+        margin-bottom: 60px;
+        border-radius: 50%;
+        background-image: url(../../img/buttonsPhoto.png);
+        background-size: cover;
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform: rotate(0deg); }
+    .main .left__main .main__button:hover {
+      background: #fff;
+      box-shadow: 0px 6px 18px rgba(184, 241, 255, 0.3);
+      border-radius: 12px;
+      color: #AFFE2D;
+      border: none;
+      margin-top: 65px;
+      cursor: pointer;
+      transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      .main .left__main .main__button:hover::after {
+        content: '';
+        width: 45px;
+        height: 45px;
+        background: #fff;
+        position: absolute;
+        margin-left: 190px;
+        margin-bottom: 60px;
+        border-radius: 50%;
+        background-image: url(../../img/buttonsPhoto.png);
+        background-size: cover;
+        transform: rotate(180deg);
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+  .main .right__main {
+    width: 40%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 60px; }
+
+/*# sourceMappingURL=Main.css.map */

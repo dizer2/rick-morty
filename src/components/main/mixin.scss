@@ -14,6 +14,21 @@
 	}
 }
 
+@mixin customFont($color, $size, $weight, $line, $spacing, $top) {
+	font-family: 'Algerian';
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: $line;
+	letter-spacing: $spacing;
+	color: $color;
+	margin-top: $top;
+	@if $color == 0 {
+		color: #fff;
+	}
+}
+
+
 @mixin display-center ($justify, $align){
 	@if $justify == 0 {
 		justify-content: flex-start;
@@ -37,4 +52,12 @@
 	-webkit-transform: translate3d($left, $center, $rigth);
 	-ms-transform: translate3d($left, $center, $rigth);
 	transform: translate3d($left, $center, $rigth);
+}
+
+@mixin mainTransition (){
+	-webkit-transition-delay: 300ms;
+	transition-delay: 300ms;
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.2s;
+	-webkit-transition: transform 0.5s, opacity 0.2s;
+	transition: transform 0.5s, opacity 0.2s;
 }

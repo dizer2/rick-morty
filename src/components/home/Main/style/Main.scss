@@ -1,0 +1,135 @@
+@import "../../../main/mixin.scss";
+@import "../../../main//variables.scss";
+@import "../../../main/main.scss";
+
+
+.main{
+	width: 100%;
+	height: 85vh;
+	display: flex;
+	overflow: hidden;
+	.left__main{
+		width: 60%;
+		height: 100%;
+		padding: 100px 200px;
+		z-index: 90;
+		.main__titel{
+			width: 570px;
+			@include customFont(0, 64px, 400, 103.98%, 0, 0);
+			@include mainTransition();
+			@include transform(0, 0, 0);
+			animation-name: main__titel ;
+			animation-duration: 1s;
+			animation-iteration-count: 1;
+			opacity: 1;
+
+			@keyframes main__titel {
+				0%{
+					opacity: 0;
+					@include transform(0, 20px, 0);
+				}
+				100%{
+					opacity: 1;
+					@include transform(0, 0, 0);
+	
+				}
+		}
+			&::after{
+				content: ".";
+				color: $hoverColor;
+				margin-left: 10px;
+			}
+
+		}
+		.main__desciption{
+			width: 550px;
+			@include font($desctiptionColor, 20px, 400, 24px, 0.02em, 0);
+			@include mainTransition();
+			@include transform(0, 0, 0);
+			margin-top: 15px;
+			animation-name: main__desciption ;
+			animation-duration: 1s;
+			animation-iteration-count: 1;
+			opacity: 1;
+		@keyframes main__desciption {
+			0%{
+				opacity: 0;
+				@include transform(0, 50px, 0);
+			}
+			100%{
+				opacity: 1;
+				@include transform(0, 0, 0);
+			}
+		}
+
+		}
+		.main__button{
+			width: 214px;
+			height: 66px;
+			@include customFont($defultColor, 18px, 400, 103.98%, 0, 65px);
+			@include transition (500ms, 0.175, 0.885, 0.320, 1.275);
+			box-shadow: 0px 6px 8px rgba(184, 241, 255, 0.3);
+			background: $mainColor;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 10px;
+			border: none;
+			cursor: pointer;
+
+			&::after{
+				content: '';
+				width: 45px;
+				height: 45px;
+				background: $mainColor;
+				position: absolute;
+				margin-left: 190px;
+				margin-bottom: 60px;
+				border-radius: 50%;
+				background-image: url(../../img/buttonsPhoto.png);
+				background-size: cover;
+				@include transition (500ms, 0.175, 0.885, 0.320, 1.275);
+				transform: rotate(0deg);
+
+			}
+
+		}
+		.main__button:hover{
+			background: #fff;
+			box-shadow: 0px 6px 18px rgba(184, 241, 255, 0.3);
+			border-radius: 12px;
+			color: $hoverColor;
+			border: none;
+			margin-top: 65px;
+			cursor: pointer;
+			@include transition (500ms, 0.175, 0.885, 0.320, 1.275);
+
+			&::after{
+				content: '';
+				width: 45px;
+				height: 45px;
+				background: #fff;
+				position: absolute;
+				margin-left: 190px;
+				margin-bottom: 60px;
+				border-radius: 50%;
+				background-image: url(../../img/buttonsPhoto.png);
+				background-size: cover;
+				transform: rotate(180deg);
+				@include transition (500ms, 0.175, 0.885, 0.320, 1.275);
+
+			}
+		}
+	}
+	.right__main{
+		width: 40%;
+		height: 100%;
+		z-index:0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: flex-end;
+		padding-right: 60px;
+
+	}
+}

@@ -4,7 +4,24 @@
   margin: 0;
   box-sizing: border-box; }
 
-body {
+a {
+  text-decoration: none; }
+
+#root {
   background-color: #4F545E; }
+
+body {
+  overflow: hidden; }
+
+body ::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.1); }
+body ::selection {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+.home {
+  width: 100%;
+  max-height: 100vh;
+  background-image: url(../../main/svg/bg.svg);
+  background-size: 700px; }
 
 /*# sourceMappingURL=Home.css.map */

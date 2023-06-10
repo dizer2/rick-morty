@@ -1,0 +1,31 @@
+#rick {
+  width: 405px;
+  height: 681.18px;
+  position: absolute;
+  bottom: -10%;
+  z-index: 0; }
+
+#rick__gradinet {
+  animation-name: rick__gradinet;
+  animation-duration: 10s;
+  animation-iteration-count: infinite; }
+@keyframes rick__gradinet {
+  0% {
+    stop-color: #B8F1FF; }
+  50% {
+    stop-color: transparent; }
+  100% {
+    stop-color: #B8F1FF; } }
+#rick__gradinet2 {
+  animation-name: rick__gradinet2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite; }
+@keyframes rick__gradinet2 {
+  0% {
+    stop-color: #B8F1FF; }
+  50% {
+    stop-color: transparent; }
+  100% {
+    stop-color: #B8F1FF; } }
+
+/*# sourceMappingURL=AnimatedSVG.css.map */

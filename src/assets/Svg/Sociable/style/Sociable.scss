@@ -1,0 +1,46 @@
+@import "../../../../components/main/mixin.scss";
+@import "../../../../components/main/variables.scss";
+
+
+.sociable{
+	width: auto;
+	height: 25px;
+	display: flex;
+	margin-top: 20px;
+	&__icon{
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+		margin-left: 30px;
+		position: relative;
+		right: 30px;
+
+	}
+	.instagramin__icon{
+		fill: $mainDefultColor;
+		@include transition(500ms, 0.175, 0.885, 0.320, 1.275);
+		&:hover{
+		fill: $mainColor;
+		@include transition(500ms, 0.175, 0.885, 0.320, 1.275);
+
+		}
+	}
+	.twiter__icon{
+		fill: $mainDefultColor;
+		@include transition(500ms, 0.175, 0.885, 0.320, 1.275);
+		&:hover{
+		fill: $mainColor;
+		@include transition(500ms, 0.175, 0.885, 0.320, 1.275);
+		}
+	}
+
+	.youtube__icon{
+		fill: $mainDefultColor;
+		@include transition(500ms, 0.175, 0.885, 0.320, 1.275);
+		&:hover{
+		fill: $mainColor;
+		@include transition(500ms, 0.175, 0.885, 0.320, 1.275);
+
+		}
+	}
+}
