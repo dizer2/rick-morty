@@ -44,3 +44,20 @@
 		}
 	}
 }
+
+@media screen and (max-width: 700px) {
+	.sociable{
+		@include display-center(center, center);
+		&__icon{
+			width: 25px;
+			height: 25px;
+			cursor: pointer;
+			margin-left: 10px;
+			margin-right: 10px;
+			position: relative;
+			right: 0px;
+	
+		}
+
+	}
+}

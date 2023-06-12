@@ -15,8 +15,7 @@ a {
   .main .left__main {
     width: 60%;
     height: 100%;
-    padding: 100px 200px;
-    z-index: 90; }
+    padding: 100px 200px; }
     .main .left__main .main__titel {
       width: 570px;
       font-family: 'Algerian';
@@ -109,7 +108,8 @@ a {
       justify-content: center;
       border-radius: 10px;
       border: none;
-      cursor: pointer; }
+      cursor: pointer;
+      z-index: 2; }
       .main .left__main .main__button::after {
         content: '';
         width: 45px;
@@ -157,5 +157,119 @@ a {
     align-items: flex-end;
     justify-content: flex-end;
     padding-right: 60px; }
+
+@media screen and (max-width: 1200px) {
+  .main .left__main {
+    width: 60%;
+    height: 100%;
+    padding: 80px 100px; }
+    .main .left__main .main__titel {
+      width: 570px;
+      font-family: 'Algerian';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 103.98%;
+      letter-spacing: 0;
+      color: 0;
+      margin-top: 0;
+      color: #fff; }
+    .main .left__main .main__desciption {
+      width: 500px;
+      font-family: 'Montserrat Alternates';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: #C7C7C7;
+      margin-top: 0; }
+    .main .left__main .main__button {
+      width: 200px;
+      height: 60px;
+      font-family: 'Algerian';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 103.98%;
+      letter-spacing: 0;
+      color: #4F545E;
+      margin-top: 65px;
+      border-radius: 10px; }
+      .main .left__main .main__button::after {
+        width: 40px;
+        height: 40px; }
+    .main .left__main .main__button:hover {
+      border-radius: 12px; }
+      .main .left__main .main__button:hover::after {
+        width: 40px;
+        height: 40px;
+        margin-left: 190px;
+        margin-bottom: 60px; }
+  .main .right__main {
+    width: 40%;
+    height: 100%;
+    padding-right: 60px; } }
+@media screen and (max-width: 700px) {
+  .main .left__main {
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 2; }
+    .main .left__main .main__titel {
+      width: 570px;
+      font-family: 'Algerian';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 103.98%;
+      letter-spacing: 0;
+      color: 0;
+      margin-top: 0;
+      color: #fff;
+      text-align: center; }
+    .main .left__main .main__desciption {
+      width: 500px;
+      font-family: 'Montserrat Alternates';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: #C7C7C7;
+      margin-top: 10px;
+      text-align: center; }
+  .main .right__main {
+    width: 0%;
+    height: 0%;
+    padding-right: 0px; } }
+@media screen and (max-width: 520px) {
+  .main .left__main .main__desciption {
+    width: 400px;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #C7C7C7;
+    margin-top: 10px;
+    text-align: center; } }
+@media screen and (max-width: 440px) {
+  .main .left__main .main__desciption {
+    width: 95%;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #C7C7C7;
+    margin-top: 10px;
+    text-align: center; } }
 
 /*# sourceMappingURL=Main.css.map */

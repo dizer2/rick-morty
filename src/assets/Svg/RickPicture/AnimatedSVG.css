@@ -2,8 +2,7 @@
   width: 405px;
   height: 681.18px;
   position: absolute;
-  bottom: -10%;
-  z-index: 0; }
+  bottom: -10%; }
 
 #rick__gradinet {
   animation-name: rick__gradinet;
@@ -27,5 +26,42 @@
     stop-color: transparent; }
   100% {
     stop-color: #B8F1FF; } }
+@media screen and (max-width: 1200px) {
+  #rick {
+    width: 350px;
+    height: 600px;
+    position: absolute;
+    bottom: -10%;
+    z-index: 0; } }
+@media screen and (max-width: 930px) {
+  #rick {
+    width: 370px;
+    height: 640px;
+    position: absolute;
+    bottom: -10%;
+    z-index: 0;
+    opacity: 0.2; } }
+@media screen and (max-width: 700px) {
+  #rick {
+    position: absolute;
+    bottom: -10%;
+    left: 28%;
+    z-index: -1; } }
+@media screen and (max-width: 520px) {
+  #rick {
+    width: 270px;
+    height: 500px;
+    position: absolute;
+    bottom: -10%;
+    left: 24%;
+    z-index: -1; } }
+@media screen and (max-width: 440px) {
+  #rick {
+    width: 240px;
+    height: 450px;
+    position: absolute;
+    bottom: -10%;
+    left: 22%;
+    z-index: -1; } }
 
 /*# sourceMappingURL=AnimatedSVG.css.map */

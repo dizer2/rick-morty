@@ -16,7 +16,7 @@ function Main() {
 			Rick and Morty is the Emmy award-winning half-hour animated hit comedy
 			series on Adult Swim that follows a sociopathic genius scientist.
 			</p>
-			<a href="./page/character/character.html">
+			<a href="/characters">
 				<button className="main__button">get started</button>
 			</a>
 			<Sociable />
