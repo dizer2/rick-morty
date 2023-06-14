@@ -28,7 +28,8 @@
       display: flex;
       flex-direction: column;
       padding-top: 15px;
-      margin: 20px; }
+      margin: 20px;
+      padding-bottom: 10px; }
       .characters__main-cart .cart__frame {
         width: 180px;
         height: 180px;
@@ -96,5 +97,50 @@
     justify-content: center;
     align-items: center;
     display: flex; }
+
+@media screen and (max-width: 1200px) {
+  .characters__filter {
+    height: auto;
+    margin: 70px 0; } }
+@media screen and (max-width: 850px) {
+  .characters__filter {
+    margin: 60px 0; }
+  .characters__main {
+    padding-bottom: 80px; }
+    .characters__main-cart {
+      width: 300px;
+      height: 400px;
+      padding-top: 10px;
+      margin: 15px;
+      padding-bottom: 10px; }
+      .characters__main-cart .cart__frame {
+        width: 160px;
+        height: 160px; }
+        .characters__main-cart .cart__frame-img {
+          width: 140px;
+          height: 140px; }
+      .characters__main-cart .cart__title {
+        width: 90%;
+        font-family: 'Montserrat Alternates';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #4F545E;
+        margin-top: 20px; }
+        .characters__main-cart .cart__title::after {
+          width: 40px; }
+        .characters__main-cart .cart__title::before {
+          width: 40px; }
+      .characters__main-cart .cart__box-text {
+        font-family: 'Montserrat Alternates';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: #AFFE2D;
+        margin-top: 10px; } }
 
 /*# sourceMappingURL=Characters.css.map */

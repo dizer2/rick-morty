@@ -27,6 +27,7 @@
 			flex-direction: column;
 			padding-top: 15px;
 			margin: 20px;
+			padding-bottom: 10px;
 			.cart__frame{
 				width: 180px;
 				height: 180px;
@@ -88,4 +89,57 @@
 		@include display-center(center, center);
 		
 	}
+}
+
+
+@media screen and(max-width: 1200px) {
+	.characters{
+		&__filter{
+			height: auto;
+			margin: 70px 0;
+		}
+	}	
+}
+
+
+@media screen and(max-width: 850px) {
+	.characters{
+		&__filter{
+			margin: 60px 0;
+		}
+		&__main{
+			padding-bottom: 80px;
+			&-cart{
+				width: 300px;
+				height: 400px;
+				padding-top: 10px;
+				margin: 15px;
+				padding-bottom: 10px;
+				.cart__frame{
+					width: 160px;
+					height: 160px;
+					&-img{
+						width: 140px;
+						height: 140px;
+					}
+				}
+				.cart__title{
+					width: 90%;
+					@include font($defultColor, 18px, 700, 24px, 0.02em, 20px);
+					&::after{
+						width: 40px;
+					}
+	
+					&::before{
+						width: 40px;
+					}
+				}
+				.cart__box{
+					&-text{
+						@include font($hoverColor, 16px, 500, 22px, 0.02em, 10px);
+					}
+				}
+			}
+		}
+	}	
 }

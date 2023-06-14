@@ -26,4 +26,37 @@
       position: relative;
       right: 100px; }
 
+@media screen and (max-width: 1245px) {
+  .filter {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 0 30px; }
+    .filter__button {
+      width: 221px;
+      height: 63px;
+      margin: 25px;
+      font-family: 'Algerian';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 103%;
+      letter-spacing: 0;
+      color: #4F545E;
+      margin-top: 0; } }
+@media screen and (max-width: 650px) {
+  .filter__button {
+    width: 200px;
+    height: 60px;
+    margin: 20px;
+    font-family: 'Algerian';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 103%;
+    letter-spacing: 0;
+    color: #4F545E;
+    margin-top: 0; } }
+
 /*# sourceMappingURL=Filter.css.map */

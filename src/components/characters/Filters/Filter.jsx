@@ -1,7 +1,14 @@
 import React from 'react'
 import "./style/Filter.css"
 
-function Filter({species, status, gender, changeSpecies, changeStatus, changeGender}) {
+function Filter({
+	species, 
+	status, gender, 
+	changeSpecies, 
+	changeStatus, 
+	changeGender,
+	restlFilters
+}) {
 
 
   return (
@@ -23,6 +30,8 @@ function Filter({species, status, gender, changeSpecies, changeStatus, changeGen
 				return ( <option  key={item} value={item}>{item}</option> )
 			})}
 		</select>
+
+		<button onClick={restlFilters} className='filter__button'>Reset filters</button>
 	</div>
   )
 }

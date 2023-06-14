@@ -21,6 +21,20 @@ function Characters() {
   let [thisGender, setThisGender] = useState("");
 
 
+  const changeSpecies = (event) => {
+    setThisSpecies(event.target.value);
+  }
+  const changeStatus = (event) => {
+    setThisStatus(event.target.value);
+  }
+  const changeGender = (event) => {
+    setThisGender(event.target.value);
+  }
+
+  const changePage = (event, thisPage) => {
+    setPage(thisPage);
+  }
+
   
   const fetchData = async () => {
     try {
@@ -43,12 +57,12 @@ function Characters() {
   })
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchCharactersData = async () => {
       try {
         const speciesArr = [];
         const statusArr = [];
         const genderArr = [];
-        
+
         for (let i = 0; i < 42; i++) {
           const response = await fetch(`https://rickandmortyapi.com/api/character?page=${i}`);
           const data = await response.json();
@@ -74,23 +88,15 @@ function Characters() {
       }
     };
   
-    fetchData();
+    fetchCharactersData();
   }, []);
 
-
-    const changeSpecies = (event) => {
-      setThisSpecies(event.target.value);
-    }
-    const changeStatus = (event) => {
-      setThisStatus(event.target.value);
-    }
-    const changeGender = (event) => {
-      setThisGender(event.target.value);
-    }
-
-  const changePage = (event, thisPage) => {
-    setPage(thisPage);
+  const restlFilters = () => {
+    setThisSpecies('');
+    setThisStatus('');
+    setThisGender('');
   }
+
 
   return (
     <div className="characters">
@@ -103,7 +109,7 @@ function Characters() {
           changeSpecies={changeSpecies}
           changeStatus={changeStatus}
           changeGender={changeGender}
-
+          restlFilters={restlFilters}
         />
       </div>
       <div className="characters__main">
