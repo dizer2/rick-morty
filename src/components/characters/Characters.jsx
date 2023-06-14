@@ -22,46 +22,60 @@ function Characters() {
 
 
   
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}&species=${thisSpecies}&status=${thisStatus}&gender=${thisGender}`);
+      if (!response.ok) {
+        throw new Error("Eror");
+      }
+      const data = await response.json();
+      setAllPage(data.info.pages);
+      setCharacters(data.results);
+      setPages(data.info.pages);
+    } catch (error) {
+      console.error("Error:", error);
+      window.location.reload(true);
+    }
+  };
+
   useEffect(() => {
-    fetch(`https://rickandmortyapi.com/api/character?page=${page}&species=${thisSpecies}&status=${thisStatus}&gender=${thisGender}`) 
-      .then(response => response.json())
-      .then(data => {
-        setAllPage(data.info.pages);
-        setCharacters(data.results);
-        setPages(data.info.pages);
-    }).catch(err =>  window.location.reload(true))
-
-  }, [characters]);
+    fetchData();
+  })
 
   useEffect(() => {
-    let speciesArr = [];
-    let statusArr = [];
-    let genderArr = [];
+    const fetchData = async () => {
+      try {
+        const speciesArr = [];
+        const statusArr = [];
+        const genderArr = [];
+        
+        for (let i = 0; i < 42; i++) {
+          const response = await fetch(`https://rickandmortyapi.com/api/character?page=${i}`);
+          const data = await response.json();
+  
+          data.results.forEach((item) => {
+            if (!speciesArr.includes(item.species)) {
+              speciesArr.push(item.species);
+            }
+            if (!statusArr.includes(item.status)) {
+              statusArr.push(item.status);
+            }
+            if (!genderArr.includes(item.gender)) {
+              genderArr.push(item.gender);
+            }
+          });
+        }
 
-    for(let i = 0; i < 42; i++){
-    fetch(`https://rickandmortyapi.com/api/character?page=${i}`)
-      .then((response) => {
-         return response.json()
-      })
-      .then((data) => {
-        data.results.map((item) => {
-          if(!speciesArr.includes(item.species)){
-            speciesArr.push(item.species);
-          }
-          if(!statusArr.includes(item.status)){
-            statusArr.push(item.status);
-          }
-          if(!genderArr.includes(item.gender)){
-            genderArr.push(item.gender);
-          }
-          setSpecies(speciesArr);
-          setStatus(statusArr);
-          setGender(genderArr);
-        })
-    })
-
-    }    
-    }, [])
+        setSpecies(speciesArr);
+        setStatus(statusArr);
+        setGender(genderArr);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
 
 
     const changeSpecies = (event) => {
