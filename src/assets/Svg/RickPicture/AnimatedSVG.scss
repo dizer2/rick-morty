@@ -3,8 +3,8 @@
 #rick{
 	width: 405px;
 	height: 681.18px;
-	position: absolute;
-	bottom: -10%;
+	position: relative;
+	top: 30px;
 	
 }
 #rick__gradinet{
@@ -53,8 +53,8 @@
 	#rick{
 		width: 350px;
 		height: 600px;
-		position: absolute;
-		bottom: -10%;
+		position: relative;
+		top: 30px;
 		z-index: 0;
 	}
 }
@@ -63,8 +63,8 @@
 	#rick{
 		width: 370px;
 		height: 640px;
-		position: absolute;
-		bottom: -10%;
+		position: relative;
+		top: 30px;
 		z-index: 0;
 		opacity: 0.2;
 	}
@@ -72,10 +72,13 @@
 
 @media screen and (max-width: 700px) {
 	#rick{
+		width: 270px;
+		height: 500px;
 		position: absolute;
-		bottom: -10%;
+		bottom: -0%;
 		left: 28%;
 		z-index: -1;
+		overflow: hidden;
 	}
 }
 
@@ -84,7 +87,8 @@
 		width: 270px;
 		height: 500px;
 		position: absolute;
-		bottom: -10%;
+		bottom: -0%;
+
 		left: 24%;
 		z-index: -1;
 	}
@@ -96,7 +100,7 @@
 		width: 240px;
 		height: 450px;
 		position: absolute;
-		bottom: -10%;
+		top: 20%;
 		left: 22%;
 		z-index: -1;
 	}

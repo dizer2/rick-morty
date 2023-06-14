@@ -5,9 +5,7 @@
 #root{
 	background-color: $defultColor;
 }
-body{
-	overflow: hidden;
-}
+
 body{
 	::-moz-selection { 
 		background-color: rgba($color: #ffffff, $alpha: 0.1);

@@ -1,0 +1,91 @@
+@import "../../main/mixin.scss";
+@import "../../main/variables.scss";
+
+.characters{
+	width: 100%;
+	min-height: 100vh;
+	&__filter{
+		width: 100%;
+		height: 15vh;
+		@include display-center(center, 0);
+		margin: 80px 0;
+
+	}
+	&__main{
+		width: 100%;
+		height: auto;
+		@include display-center(center, 0);
+		flex-wrap: wrap;
+		padding-bottom: 100px;
+		&-cart{
+			width: 340px;
+			height: 430px;
+			background: #FFFFFF;
+			box-shadow: 0px 4px 7px rgba(184, 241, 255, 0.2);
+			border-radius: 6px;
+			@include display-center(0, center);
+			flex-direction: column;
+			padding-top: 15px;
+			margin: 20px;
+			.cart__frame{
+				width: 180px;
+				height: 180px;
+				border-radius: 50%;
+				border: 2px dashed #B8F1FF;
+				@include display-center(center, center);
+				&-img{
+					width: 150px;
+					height: 150px;
+					border-radius: 50%;
+				}
+			}
+			.cart__title{
+				width: 90%;
+				@include font($defultColor, 20px, 700, 24px, 0.02em, 20px);
+				position: relative;
+				@include display-center(center, center);
+				text-align: center;
+				&::after{
+					content: "";
+					width: 50px;
+					border: 1px solid #4F545E;
+					border-radius: 28px;
+					transform: rotate(180deg);
+					position: relative;
+					margin-left: 10px;
+				}
+
+				&::before{
+					content: "";
+					width: 50px;
+					border: 1px solid #4F545E;
+					border-radius: 28px;
+					transform: rotate(180deg);
+					position: relative;
+					margin-right: 10px;
+				}
+			}
+
+			.cart__box{
+				width: 100%;
+				height: auto;
+				padding: 0 15px;
+				margin-top: 5px;
+				&-text{
+					@include font($hoverColor, 18px, 500, 22px, 0.02em, 10px);
+					span{
+						color: $defultColor;
+					}	
+				}
+			}
+		}
+	}
+	.pagination{
+		width: auto;
+		height: 60px;
+		position: relative;
+		bottom: 60px;
+		@include display-center(center, center);
+		
+	}
+}

@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+.characters {
+  width: 100%;
+  min-height: 100vh; }
+  .characters__filter {
+    width: 100%;
+    height: 15vh;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    margin: 80px 0; }
+  .characters__main {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 100px; }
+    .characters__main-cart {
+      width: 340px;
+      height: 430px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 7px rgba(184, 241, 255, 0.2);
+      border-radius: 6px;
+      justify-content: flex-start;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-top: 15px;
+      margin: 20px; }
+      .characters__main-cart .cart__frame {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 2px dashed #B8F1FF;
+        justify-content: center;
+        align-items: center;
+        display: flex; }
+        .characters__main-cart .cart__frame-img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%; }
+      .characters__main-cart .cart__title {
+        width: 90%;
+        font-family: 'Montserrat Alternates';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #4F545E;
+        margin-top: 20px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center; }
+        .characters__main-cart .cart__title::after {
+          content: "";
+          width: 50px;
+          border: 1px solid #4F545E;
+          border-radius: 28px;
+          transform: rotate(180deg);
+          position: relative;
+          margin-left: 10px; }
+        .characters__main-cart .cart__title::before {
+          content: "";
+          width: 50px;
+          border: 1px solid #4F545E;
+          border-radius: 28px;
+          transform: rotate(180deg);
+          position: relative;
+          margin-right: 10px; }
+      .characters__main-cart .cart__box {
+        width: 100%;
+        height: auto;
+        padding: 0 15px;
+        margin-top: 5px; }
+        .characters__main-cart .cart__box-text {
+          font-family: 'Montserrat Alternates';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          color: #AFFE2D;
+          margin-top: 10px; }
+          .characters__main-cart .cart__box-text span {
+            color: #4F545E; }
+  .characters .pagination {
+    width: auto;
+    height: 60px;
+    position: relative;
+    bottom: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex; }
+
+/*# sourceMappingURL=Characters.css.map */

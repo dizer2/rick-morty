@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+.filter {
+  display: flex; }
+  .filter__button {
+    width: 221px;
+    height: 63px;
+    border: none;
+    background: #B8F1FF;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    margin: 0 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: 'Algerian';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 103%;
+    letter-spacing: 0;
+    color: #4F545E;
+    margin-top: 0; }
+    .filter__button option {
+      position: relative;
+      right: 100px; }
+
+/*# sourceMappingURL=Filter.css.map */
