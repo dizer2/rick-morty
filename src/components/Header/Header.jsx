@@ -66,7 +66,7 @@ function Header() {
     {/* header menu */}
     <div className={burgerOpen ? 'header__menu' : 'header__menu-active'}>
       {navigation.map(item => {
-        return <Link key={item.id} to={item.link}><p id={item.link} className={burgerOpen ? 'header__nav-text' : 'header__nav-text header__nav-active'}>{item.content}</p></Link>
+        return <Link onClick={() => hadleMouseOpenBurger()} key={item.id} to={item.link}><p id={item.link} className={burgerOpen ? 'header__nav-text' : 'header__nav-text header__nav-active'}>{item.content}</p></Link>
       })}
     </div>
   </div>
