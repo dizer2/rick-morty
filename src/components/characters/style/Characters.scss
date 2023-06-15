@@ -1,9 +1,13 @@
 @import "../../main/mixin.scss";
 @import "../../main/variables.scss";
+@import "../../main/main.scss";
+
 
 .characters{
 	width: 100%;
 	min-height: 100vh;
+	background-image: url(../../main/svg/bg.svg);
+	background-size: 700px;
 	&__filter{
 		width: 100%;
 		height: 15vh;

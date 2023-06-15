@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+.episodes__filers {
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0; }
+  .episodes__filers-input {
+    width: 330px;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 0 20px;
+    margin: 0 20px;
+    cursor: pointer;
+    background: #B8F1FF;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 103%;
+    letter-spacing: 0;
+    color: #4F545E;
+    margin-top: 0; }
+    .episodes__filers-input::placeholder {
+      font-family: 'Algerian'; }
+  .episodes__filers-name {
+    width: 330px;
+    min-height: 1px;
+    border: none;
+    outline: none;
+    position: relative;
+    bottom: 8px;
+    border-radius: 0px 0px 20px 20px;
+    padding-bottom: 20px;
+    background: #B8F1FF;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 103%;
+    letter-spacing: 0;
+    color: #4F545E;
+    margin-top: 0; }
+    .episodes__filers-name p {
+      width: 100%;
+      height: 60px;
+      justify-content: flex-start;
+      align-items: center;
+      display: flex;
+      padding-left: 20px;
+      background-color: transparent;
+      transition: 0.2s; }
+      .episodes__filers-name p:hover {
+        background-color: #fff;
+        transition: 0.2s; }
+
+@media screen and (max-width: 500px) {
+  .episodes__filers {
+    margin: 60px 0;
+    padding: 0 30px; }
+    .episodes__filers-input {
+      width: 100%;
+      height: 55px;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      padding: 0 20px;
+      margin: 0 20px;
+      cursor: pointer;
+      background: #B8F1FF;
+      font-family: 'Montserrat Alternates';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 103%;
+      letter-spacing: 0;
+      color: #4F545E;
+      margin-top: 0; }
+      .episodes__filers-input::placeholder {
+        font-family: 'Algerian'; }
+    .episodes__filers-name {
+      width: 100%;
+      min-height: 1px;
+      border: none;
+      outline: none;
+      position: relative;
+      bottom: 8px;
+      border-radius: 0px 0px 20px 20px;
+      padding-bottom: 20px;
+      background: #B8F1FF;
+      font-family: 'Montserrat Alternates';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 103%;
+      letter-spacing: 0;
+      color: #4F545E;
+      margin-top: 0; }
+      .episodes__filers-name p {
+        width: 100%;
+        height: 60px;
+        justify-content: flex-start;
+        align-items: center;
+        display: flex;
+        padding-left: 20px;
+        background-color: transparent;
+        transition: 0.2s; }
+        .episodes__filers-name p:hover {
+          background-color: #fff;
+          transition: 0.2s; } }
+
+/*# sourceMappingURL=NameFilter.css.map */

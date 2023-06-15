@@ -1,7 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
 .characters {
   width: 100%;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-image: url(../../main/svg/bg.svg);
+  background-size: 700px; }
   .characters__filter {
     width: 100%;
     height: 15vh;
