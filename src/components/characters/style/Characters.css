@@ -7,6 +7,15 @@
 a {
   text-decoration: none; }
 
+::-webkit-scrollbar {
+  width: 13px; }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+::-webkit-scrollbar-thumb {
+  background: #B8F1FF; }
+
 .characters {
   width: 100%;
   min-height: 100vh;
