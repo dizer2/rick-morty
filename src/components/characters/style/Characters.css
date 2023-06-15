@@ -35,7 +35,8 @@ a {
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 100px; }
+    padding-bottom: 100px;
+    padding: 0 30px; }
     .characters__main-cart {
       width: 340px;
       height: 430px;
@@ -110,9 +111,9 @@ a {
             color: #4F545E; }
   .characters .pagination {
     width: auto;
-    height: 60px;
+    height: 100px;
     position: relative;
-    bottom: 60px;
+    bottom: 40px;
     justify-content: center;
     align-items: center;
     display: flex; }
