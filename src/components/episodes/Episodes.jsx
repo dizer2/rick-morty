@@ -27,9 +27,6 @@ function Episodes() {
         allNameArr.push(item.name)
        });
        setAllName(allNameArr);
-       
-
-
     } catch (error) {
       console.error("Error:", error);
     }
@@ -46,10 +43,11 @@ function Episodes() {
   }
 
   const nameFilter = (event) => {
+    setPage(1);
     setName(event.target.value);
-    
   }
   const choseNameInput = (event) => {
+    setPage(1);
     setName(event.target.id);
   }
 
