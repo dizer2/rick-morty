@@ -1,19 +1,20 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Rick and Morty",
+  "name": "The Rick and Morty web-site is an online platform dedicated to the popular animated television show  It serves as a hub for fans of the show, providing a range of information, resources, and interactive features related to the series. The web-site offers a comprehensive overview of the show's characters, including the main protagonists Rick Sanchez and Morty Smith, as well as other memorable characters such as Summer, Beth, and Jerry.",
+  
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./src/components/main/img/icon.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "./src/components/main/img/icon.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "./src/components/main/img/icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
