@@ -1,0 +1,89 @@
+@import "../../main/mixin.scss";
+@import "../../main/variables.scss";
+
+.location{
+	width: 100%;
+	min-height: 100vh;
+	background-image: url(../../main/svg/bg.svg);
+	background-size: 700px;
+	&__filter{
+		width: 100%;
+		height: 15vh;
+		@include display-center(center, 0);
+		margin: 80px 0;
+	}
+	&__main{
+		width: 100%;
+		height: auto;
+		@include display-center(0, center);
+		flex-direction: column;
+		padding-bottom: 100px;
+		.characterCard{
+			width: 711px;
+			height: 199px;
+			background: #FFFFFF;
+			box-shadow: 0px 4px 7px rgba(184, 241, 255, 0.2);
+			border-radius: 15px;
+			padding: 30px;
+			padding-top: 20px;
+			margin-top: 40px;
+			.charapter__nameBox{
+				width: 100%;
+				height: 25px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 30px;
+				.charapter__name{
+				@include font($defultColor, 24px, 700, 24px, 0.02em, 0);
+				@include display-center(0, center);
+				position: relative;
+				&::after{
+					content: "";
+					width: 50px;
+					height: px;
+					border: 1px solid #4F545E;
+					border-radius: 28px;
+					transform: rotate(180deg);
+					position: relative;
+					margin-left: 10px;
+
+				}
+				&::before{
+					content: "";
+					width: 50px;
+					height: px;
+					border: 1px solid #4F545E;
+					border-radius: 28px;
+					transform: rotate(180deg);
+					position: relative;
+					margin-right: 10px;
+
+				}
+
+				}
+				
+			}
+			.description__container{
+				margin-top: 20px;
+				.description__teg{
+					@include font($hoverColor, 18px, 500, 22px, 0.02em, 10px);
+				.desciption__span{
+					color: $defultColor;
+				}
+				}
+			}
+
+
+		}
+
+	}
+	.pagination{
+		width: auto;
+		height: 60px;
+		position: relative;
+		bottom: 60px;
+		@include display-center(center, center);
+		
+	}
+}

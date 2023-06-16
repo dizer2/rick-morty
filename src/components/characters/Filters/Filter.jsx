@@ -3,7 +3,8 @@ import "./style/Filter.css"
 
 function Filter({
 	species, 
-	status, gender, 
+	status, 
+	gender, 
 	changeSpecies, 
 	changeStatus, 
 	changeGender,

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import "./style/Characters.css"
 import Header from '../Header/Header';
 import Filter from './Filters/Filter';
@@ -21,21 +21,48 @@ function Characters() {
   let [thisGender, setThisGender] = useState("");
 
 
-  const changeSpecies = (event) => {
-    setThisSpecies(event.target.value);
-  }
-  const changeStatus = (event) => {
-    setThisStatus(event.target.value);
-  }
-  const changeGender = (event) => {
-    setThisGender(event.target.value);
-  }
-
-  const changePage = (event, thisPage) => {
-    setPage(thisPage);
-  }
-
+  useEffect(() => {
+    const fetchCharactersData = async () => {
+      try {
+        const requests = [];
+        const speciesArr = [];
+        const statusArr = [];
+        const genderArr = [];
   
+        for (let i = 0; i < 42; i++) {
+          requests.push(fetch(`https://rickandmortyapi.com/api/character?page=${i}`));
+        }
+        
+        const responses = await Promise.all(requests);
+  
+        for (const response of responses) {
+          const data = await response.json();
+          data.results.forEach((item) => {
+            if (!speciesArr.includes(item.species)) {
+              speciesArr.push(item.species);
+            }
+            if (!statusArr.includes(item.status)) {
+              statusArr.push(item.status);
+            }
+            if (!genderArr.includes(item.gender)) {
+              genderArr.push(item.gender);
+            }
+          });
+        }
+  
+        setSpecies(speciesArr);
+        setStatus(statusArr);
+        setGender(genderArr);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+  
+    fetchCharactersData();
+  }, []);
+
+
+
   const fetchData = async () => {
     try {
       const response = await fetch(`https://rickandmortyapi.com/api/character?page=${page}&species=${thisSpecies}&status=${thisStatus}&gender=${thisGender}`);
@@ -56,47 +83,30 @@ function Characters() {
     fetchData();
   })
 
-  useEffect(() => {
-    const fetchCharactersData = async () => {
-      try {
-        const speciesArr = [];
-        const statusArr = [];
-        const genderArr = [];
 
-        for (let i = 0; i < 42; i++) {
-          const response = await fetch(`https://rickandmortyapi.com/api/character?page=${i}`);
-          const data = await response.json();
-  
-          data.results.forEach((item) => {
-            if (!speciesArr.includes(item.species)) {
-              speciesArr.push(item.species);
-            }
-            if (!statusArr.includes(item.status)) {
-              statusArr.push(item.status);
-            }
-            if (!genderArr.includes(item.gender)) {
-              genderArr.push(item.gender);
-            }
-          });
-        }
-
-        setSpecies(speciesArr);
-        setStatus(statusArr);
-        setGender(genderArr);
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    };
-  
-    fetchCharactersData();
+  const changeSpecies = useCallback(event => {
+    setThisSpecies(event.target.value);
   }, []);
+  
+  const changeStatus = useCallback(event => {
+    setThisStatus(event.target.value);
+  }, []);
+  
+  const changeGender = useCallback(event => {
+    setThisGender(event.target.value);
+  }, []);
+
+  const changePage = (event, thisPage) => {
+    setPage(thisPage);
+  }
+
+
 
   const restlFilters = () => {
     setThisSpecies('');
     setThisStatus('');
     setThisGender('');
   }
-
 
   return (
     <div className="characters">

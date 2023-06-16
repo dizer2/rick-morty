@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+.location {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../../main/svg/bg.svg);
+  background-size: 700px; }
+  .location__filter {
+    width: 100%;
+    height: 15vh;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    margin: 80px 0; }
+  .location__main {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px; }
+    .location__main .characterCard {
+      width: 711px;
+      height: 199px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 7px rgba(184, 241, 255, 0.2);
+      border-radius: 15px;
+      padding: 30px;
+      padding-top: 20px;
+      margin-top: 40px; }
+      .location__main .characterCard .charapter__nameBox {
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px; }
+        .location__main .characterCard .charapter__nameBox .charapter__name {
+          font-family: 'Montserrat Alternates';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: #4F545E;
+          margin-top: 0;
+          justify-content: flex-start;
+          align-items: center;
+          display: flex;
+          position: relative; }
+          .location__main .characterCard .charapter__nameBox .charapter__name::after {
+            content: "";
+            width: 50px;
+            height: px;
+            border: 1px solid #4F545E;
+            border-radius: 28px;
+            transform: rotate(180deg);
+            position: relative;
+            margin-left: 10px; }
+          .location__main .characterCard .charapter__nameBox .charapter__name::before {
+            content: "";
+            width: 50px;
+            height: px;
+            border: 1px solid #4F545E;
+            border-radius: 28px;
+            transform: rotate(180deg);
+            position: relative;
+            margin-right: 10px; }
+      .location__main .characterCard .description__container {
+        margin-top: 20px; }
+        .location__main .characterCard .description__container .description__teg {
+          font-family: 'Montserrat Alternates';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          color: #AFFE2D;
+          margin-top: 10px; }
+          .location__main .characterCard .description__container .description__teg .desciption__span {
+            color: #4F545E; }
+  .location .pagination {
+    width: auto;
+    height: 60px;
+    position: relative;
+    bottom: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex; }
+
+/*# sourceMappingURL=Location.css.map */
