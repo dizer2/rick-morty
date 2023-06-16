@@ -106,26 +106,6 @@
 		.header__nav-text{
 			margin: 15px 0;
 		}
-		.header__nav-active{
-			animation-name: header__navs;
-			animation-duration: 1s;
-			animation-iteration-count: 1;
-			@keyframes header__navs {
-				0%{
-					opacity: 0;
-					@include transform(0, -50px, 0);
-				}
-				80%{
-					opacity: 0;
-					@include transform(0, -50px, 0);
-
-				}
-				100%{
-					opacity: 1;
-					@include transform(0, 0, 0);
-				}
-			}
-		}
 
 		@keyframes header__menu {
 			0%{
@@ -185,6 +165,47 @@
 	.header{
 		&__nav{
 			display: none;
+			position: relative;
+		
+		}
+		&__nav-active{
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			@include display-center(center, center);
+			flex-direction: column;
+			left: 0%;
+			top: 0%;
+			p{
+				margin: 20px 0;
+				font-size: 22px;
+				position: relative;
+				right: 0px;
+				left: 0px;
+				margin-right: 0px;
+				margin-left: 0px;
+				text-align: center;
+				position: relative;
+				left: 20px;
+				animation-name: header__navs3;
+				animation-duration: 1s;
+				animation-iteration-count: 1;
+				@keyframes header__navs3 {
+				0%{
+					opacity: 0;
+					@include transform(0, -50px, 0);
+				}
+				80%{
+					opacity: 0;
+					@include transform(0, -50px, 0);
+
+				}
+				100%{
+					opacity: 1;
+					@include transform(0, 0, 0);
+				}
+			    }
+			}
 		}
 		&__burger{
 			display: flex;
@@ -197,5 +218,10 @@
 
 	}
 }
+	
+
+
+
+
 	
 	

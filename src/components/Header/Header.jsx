@@ -48,11 +48,13 @@ function Header() {
 		}
 	}
 
+	const burger = burgerOpen ? 'header__nav' : 'header__nav-active';
+
   return (
 	<div className='header'>
     <Logo />
 
-    <div className="header__nav">
+    <div className={burger}>
       {navigation.map(item => {
         return <Link key={item.id} to={item.link}><p id={item.link} className="header__nav-text">{item.content}</p></Link>
       })}
@@ -64,11 +66,7 @@ function Header() {
     </div>
 
     {/* header menu */}
-    <div className={burgerOpen ? 'header__menu' : 'header__menu-active'}>
-      {navigation.map(item => {
-        return <Link onClick={() => hadleMouseOpenBurger()} key={item.id} to={item.link}><p id={item.link} className={burgerOpen ? 'header__nav-text' : 'header__nav-text header__nav-active'}>{item.content}</p></Link>
-      })}
-    </div>
+    <div className={burgerOpen ? 'header__menu' : 'header__menu-active'}></div>
   </div>
   )
 }
