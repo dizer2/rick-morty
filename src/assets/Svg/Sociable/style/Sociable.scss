@@ -2,11 +2,16 @@
 @import "../../../../components/main/variables.scss";
 
 
+
 .sociable{
 	width: auto;
 	height: 25px;
 	display: flex;
 	margin-top: 20px;
+	z-index: -1;
+	a{
+		z-index: 0;
+	}
 	&__icon{
 		width: 25px;
 		height: 25px;
@@ -14,6 +19,8 @@
 		margin-left: 30px;
 		position: relative;
 		right: 30px;
+		z-index: -1;
+
 
 	}
 	.instagramin__icon{
@@ -56,7 +63,6 @@
 			margin-right: 10px;
 			position: relative;
 			right: 0px;
-	
 		}
 
 	}
