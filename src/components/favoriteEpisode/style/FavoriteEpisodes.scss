@@ -1,0 +1,181 @@
+@import "../../main/mixin.scss";
+@import "../../main/variables.scss";
+
+
+
+.favoriteEpisodes{
+	width: 100%;
+	min-height: 100vh;
+	background-image: url(../../main/svg/bg.svg);
+	background-size: 700px;
+	.love{
+		opacity: 0.5;
+	}	
+	&__main{
+		width: 100%;
+		height: auto;
+		@include display-center(0, center);
+		flex-direction: column;
+		padding-bottom: 100px;
+		&-cart{
+			width: 711px;
+			height: 199px;
+			background: #FFFFFF;
+			box-shadow: 0px 4px 7px rgba(184, 241, 255, 0.2);
+			border-radius: 15px;
+			padding: 30px;
+			padding-top: 20px;
+			margin-top: 40px;
+			.charapter__name-box{
+				width: 100%;
+				height: 25px;
+				@include display-center(center, center);
+				margin-top: 30px;
+				.charapter__name{
+				@include font($defultColor, 24px, 700, 24px, 0.02em, 0);
+				@include display-center(0, center);
+				position: relative;
+				&::after{
+					content: "";
+					width: 50px;
+					height: 0px;
+					border: 1px solid #4F545E;
+					border-radius: 28px;
+					transform: rotate(180deg);
+					position: relative;
+					margin-left: 10px;
+
+				}
+				&::before{
+					content: "";
+					width: 50px;
+					height: 0px;
+					border: 1px solid #4F545E;
+					border-radius: 28px;
+					transform: rotate(180deg);
+					position: relative;
+					margin-right: 10px;
+
+				}
+
+				}
+				
+			}
+			.description__container{
+				margin-top: 20px;
+				@include display-center(space-between, flex-end);
+
+				&-contant{
+					.description__teg{
+						@include font($hoverColor, 18px, 500, 22px, 0.02em, 10px);
+					.desciption__span{
+						color: $defultColor;
+					}
+				}
+				}
+				&-settings{
+					display: flex;
+					.settings__box{
+						width: 26px;
+						height: 26px;
+						background: #4F545E;
+						border-radius: 2px;
+						@include display-center(center, center);
+						cursor: pointer;
+						margin-right: 15px;
+						position: relative;
+						left: 15px;
+						&-remove{
+							.remove__hover{
+								fill: #fff;
+								transform: 0.5s;
+							}
+							&:hover{
+								.remove__hover{
+									fill: $hoverColor;
+									transform: 0.5s;
+								}	
+							}
+						}
+						&-love{
+							.lvoe__hover{
+								fill: #fff;
+								transform: 0.5s;
+							}
+							&:hover{
+								.lvoe__hover{
+									fill: $hoverColor;
+									transform: 0.5s;
+								}	
+							}
+						}
+					}
+				}
+			}
+
+
+		}
+
+	}
+}
+
+
+@media screen and(max-width: 800px) {
+	.favoriteEpisodes{	
+		&__main{
+			padding: 0 30px;
+			padding-bottom: 100px;
+			&-cart{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
+
+@media screen and(max-width: 500px) {
+	.favoriteEpisodes{	
+		&__main{
+			&-cart{
+				width: 100%;
+				height: auto;
+				padding: 25px;
+				padding-top: 15px;
+				margin-top: 30px;
+				.charapter__name-box{
+					margin-top: 25px;
+					
+					.charapter__name{
+					@include font($defultColor, 20px, 700, 24px, 0.02em, 0);
+					&::after{
+						width: 40px;
+					}
+					&::before{
+						width: 40px;
+					}
+					}
+				}
+				.description__container{
+					margin-top: 15px;
+					@include display-center(flex-end, 0);
+					flex-direction: column;
+					&-contant{
+						.description__teg{
+							@include font($hoverColor, 18px, 500, 22px, 0.02em, 10px);
+					}
+					}
+					&-settings{
+						margin-top: 20px;
+						.settings__box{
+							width: 26px;
+							height: 26px;
+							margin-right: 15px;
+							position: relative;
+							left: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

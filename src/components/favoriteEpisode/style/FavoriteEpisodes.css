@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap");
+.favoriteEpisodes {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../../main/svg/bg.svg);
+  background-size: 700px; }
+  .favoriteEpisodes .love {
+    opacity: 0.5; }
+  .favoriteEpisodes__main {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px; }
+    .favoriteEpisodes__main-cart {
+      width: 711px;
+      height: 199px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 7px rgba(184, 241, 255, 0.2);
+      border-radius: 15px;
+      padding: 30px;
+      padding-top: 20px;
+      margin-top: 40px; }
+      .favoriteEpisodes__main-cart .charapter__name-box {
+        width: 100%;
+        height: 25px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 30px; }
+        .favoriteEpisodes__main-cart .charapter__name-box .charapter__name {
+          font-family: 'Montserrat Alternates';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: #4F545E;
+          margin-top: 0;
+          justify-content: flex-start;
+          align-items: center;
+          display: flex;
+          position: relative; }
+          .favoriteEpisodes__main-cart .charapter__name-box .charapter__name::after {
+            content: "";
+            width: 50px;
+            height: 0px;
+            border: 1px solid #4F545E;
+            border-radius: 28px;
+            transform: rotate(180deg);
+            position: relative;
+            margin-left: 10px; }
+          .favoriteEpisodes__main-cart .charapter__name-box .charapter__name::before {
+            content: "";
+            width: 50px;
+            height: 0px;
+            border: 1px solid #4F545E;
+            border-radius: 28px;
+            transform: rotate(180deg);
+            position: relative;
+            margin-right: 10px; }
+      .favoriteEpisodes__main-cart .description__container {
+        margin-top: 20px;
+        justify-content: space-between;
+        align-items: flex-end;
+        display: flex; }
+        .favoriteEpisodes__main-cart .description__container-contant .description__teg {
+          font-family: 'Montserrat Alternates';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          color: #AFFE2D;
+          margin-top: 10px; }
+          .favoriteEpisodes__main-cart .description__container-contant .description__teg .desciption__span {
+            color: #4F545E; }
+        .favoriteEpisodes__main-cart .description__container-settings {
+          display: flex; }
+          .favoriteEpisodes__main-cart .description__container-settings .settings__box {
+            width: 26px;
+            height: 26px;
+            background: #4F545E;
+            border-radius: 2px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            cursor: pointer;
+            margin-right: 15px;
+            position: relative;
+            left: 15px; }
+            .favoriteEpisodes__main-cart .description__container-settings .settings__box-remove .remove__hover {
+              fill: #fff;
+              transform: 0.5s; }
+            .favoriteEpisodes__main-cart .description__container-settings .settings__box-remove:hover .remove__hover {
+              fill: #AFFE2D;
+              transform: 0.5s; }
+            .favoriteEpisodes__main-cart .description__container-settings .settings__box-love .lvoe__hover {
+              fill: #fff;
+              transform: 0.5s; }
+            .favoriteEpisodes__main-cart .description__container-settings .settings__box-love:hover .lvoe__hover {
+              fill: #AFFE2D;
+              transform: 0.5s; }
+
+@media screen and (max-width: 800px) {
+  .favoriteEpisodes__main {
+    padding: 0 30px;
+    padding-bottom: 100px; }
+    .favoriteEpisodes__main-cart {
+      width: 100%;
+      height: auto; } }
+@media screen and (max-width: 500px) {
+  .favoriteEpisodes__main-cart {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    padding-top: 15px;
+    margin-top: 30px; }
+    .favoriteEpisodes__main-cart .charapter__name-box {
+      margin-top: 25px; }
+      .favoriteEpisodes__main-cart .charapter__name-box .charapter__name {
+        font-family: 'Montserrat Alternates';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #4F545E;
+        margin-top: 0; }
+        .favoriteEpisodes__main-cart .charapter__name-box .charapter__name::after {
+          width: 40px; }
+        .favoriteEpisodes__main-cart .charapter__name-box .charapter__name::before {
+          width: 40px; }
+    .favoriteEpisodes__main-cart .description__container {
+      margin-top: 15px;
+      justify-content: flex-end;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column; }
+      .favoriteEpisodes__main-cart .description__container-contant .description__teg {
+        font-family: 'Montserrat Alternates';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: #AFFE2D;
+        margin-top: 10px; }
+      .favoriteEpisodes__main-cart .description__container-settings {
+        margin-top: 20px; }
+        .favoriteEpisodes__main-cart .description__container-settings .settings__box {
+          width: 26px;
+          height: 26px;
+          margin-right: 15px;
+          position: relative;
+          left: 0px; } }
+
+/*# sourceMappingURL=FavoriteEpisodes.css.map */

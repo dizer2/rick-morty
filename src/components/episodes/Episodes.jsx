@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../Header/Header';
 import { Pagination } from '@mui/material';
 import "./style/Episodes.css"
-import Filter from '../nameFilter/nameFilter';
+import NameFilrer from '../nameFilter/nameFilter';
 
 function Episodes() {
 
@@ -55,7 +55,7 @@ function Episodes() {
   return (
 	<div className='episodes'>
     <Header />
-    <Filter 
+    <NameFilrer 
       name={name}
       nameFilter={nameFilter}
       choseNameInput={choseNameInput}
