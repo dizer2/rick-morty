@@ -118,9 +118,9 @@ function Location() {
     <div className="location__main">
     {location.map(item => {
           return (
-            <div key={item.id} className="characterCard">
-            <div className="charapter__nameBox">
-              <p className="charapter__name">{item.name}</p>
+            <div key={item.id} className="location__main-cart">
+            <div className="location___name-box">
+              <p className="location___name">{item.name}</p>
             </div>
             <div className="description__container">
               <p className="description__teg">Type: <span className="desciption__span species">{item.type}</span></p>

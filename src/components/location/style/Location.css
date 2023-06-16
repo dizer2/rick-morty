@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 100px; }
-    .location__main .characterCard {
+    .location__main-cart {
       width: 711px;
       height: 199px;
       background: #FFFFFF;
@@ -28,14 +28,14 @@
       padding: 30px;
       padding-top: 20px;
       margin-top: 40px; }
-      .location__main .characterCard .charapter__nameBox {
+      .location__main-cart .location___name-box {
         width: 100%;
         height: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 30px; }
-        .location__main .characterCard .charapter__nameBox .charapter__name {
+        .location__main-cart .location___name-box .location___name {
           font-family: 'Montserrat Alternates';
           font-style: normal;
           font-weight: 700;
@@ -47,28 +47,29 @@
           justify-content: flex-start;
           align-items: center;
           display: flex;
+          text-align: center;
           position: relative; }
-          .location__main .characterCard .charapter__nameBox .charapter__name::after {
+          .location__main-cart .location___name-box .location___name::after {
             content: "";
             width: 50px;
-            height: px;
+            height: 0px;
             border: 1px solid #4F545E;
             border-radius: 28px;
             transform: rotate(180deg);
             position: relative;
             margin-left: 10px; }
-          .location__main .characterCard .charapter__nameBox .charapter__name::before {
+          .location__main-cart .location___name-box .location___name::before {
             content: "";
             width: 50px;
-            height: px;
+            height: 0px;
             border: 1px solid #4F545E;
             border-radius: 28px;
             transform: rotate(180deg);
             position: relative;
             margin-right: 10px; }
-      .location__main .characterCard .description__container {
+      .location__main-cart .description__container {
         margin-top: 20px; }
-        .location__main .characterCard .description__container .description__teg {
+        .location__main-cart .description__container .description__teg {
           font-family: 'Montserrat Alternates';
           font-style: normal;
           font-weight: 500;
@@ -77,7 +78,7 @@
           letter-spacing: 0.02em;
           color: #AFFE2D;
           margin-top: 10px; }
-          .location__main .characterCard .description__container .description__teg .desciption__span {
+          .location__main-cart .description__container .description__teg .desciption__span {
             color: #4F545E; }
   .location .pagination {
     width: auto;
@@ -87,5 +88,62 @@
     justify-content: center;
     align-items: center;
     display: flex; }
+
+@media screen and (max-width: 800px) {
+  .location__main {
+    padding-bottom: 40px;
+    padding: 0 30px; }
+    .location__main-cart {
+      width: 100%;
+      height: 199px;
+      padding: 30px; }
+  .location .pagination {
+    height: 140px;
+    position: relative;
+    bottom: 0px; } }
+@media screen and (max-width: 550px) {
+  .location__main {
+    padding-top: 100px; }
+    .location__main-cart {
+      width: 100%;
+      height: auto;
+      padding: 30px;
+      padding-top: 15px;
+      margin-top: 30px;
+      padding-bottom: 15px; }
+      .location__main-cart .location___name-box {
+        margin-top: 25px; }
+        .location__main-cart .location___name-box .location___name {
+          font-family: 'Montserrat Alternates';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: #4F545E;
+          margin-top: 0; }
+          .location__main-cart .location___name-box .location___name::after {
+            content: "";
+            width: 40px; }
+          .location__main-cart .location___name-box .location___name::before {
+            content: "";
+            width: 40px; }
+      .location__main-cart .description__container {
+        margin-top: 20px; }
+        .location__main-cart .description__container .description__teg {
+          font-family: 'Montserrat Alternates';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          color: #AFFE2D;
+          margin-top: 10px; }
+          .location__main-cart .description__container .description__teg .desciption__span {
+            color: #4F545E; }
+  .location .pagination {
+    height: 140px;
+    position: relative;
+    bottom: 0px; } }
 
 /*# sourceMappingURL=Location.css.map */

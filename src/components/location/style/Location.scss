@@ -18,7 +18,7 @@
 		@include display-center(0, center);
 		flex-direction: column;
 		padding-bottom: 100px;
-		.characterCard{
+		&-cart{
 			width: 711px;
 			height: 199px;
 			background: #FFFFFF;
@@ -27,21 +27,22 @@
 			padding: 30px;
 			padding-top: 20px;
 			margin-top: 40px;
-			.charapter__nameBox{
+			.location___name-box{
 				width: 100%;
 				height: 25px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				margin-top: 30px;
-				.charapter__name{
+				.location___name{
 				@include font($defultColor, 24px, 700, 24px, 0.02em, 0);
 				@include display-center(0, center);
+				text-align: center;
 				position: relative;
 				&::after{
 					content: "";
 					width: 50px;
-					height: px;
+					height: 0px;
 					border: 1px solid #4F545E;
 					border-radius: 28px;
 					transform: rotate(180deg);
@@ -52,7 +53,7 @@
 				&::before{
 					content: "";
 					width: 50px;
-					height: px;
+					height: 0px;
 					border: 1px solid #4F545E;
 					border-radius: 28px;
 					transform: rotate(180deg);
@@ -85,5 +86,70 @@
 		bottom: 60px;
 		@include display-center(center, center);
 		
+	}
+}
+
+@media screen and(max-width: 800px) {
+	.location{
+		&__main{
+			padding-bottom: 40px;
+			padding: 0 30px;
+			&-cart{
+				width: 100%;
+				height: 199px;
+				padding: 30px;
+			}
+		}
+		.pagination{
+			height: 140px;
+			position: relative;
+			bottom: 0px;
+			
+		}
+	}
+}
+
+@media screen and(max-width: 550px) {
+	.location{
+		&__main{
+			padding-top: 100px;
+			&-cart{
+				width: 100%;
+				height: auto;
+				padding: 30px;
+				padding-top: 15px;
+				margin-top: 30px;
+				padding-bottom: 15px;
+				.location___name-box{
+					margin-top: 25px;
+					.location___name{
+					@include font($defultColor, 20px, 700, 24px, 0.02em, 0);
+					&::after{
+						content: "";
+						width: 40px;
+					}
+					&::before{
+						content: "";
+						width: 40px;
+					}
+				  }
+				}
+				.description__container{
+					margin-top: 20px;
+					.description__teg{
+						@include font($hoverColor, 18px, 500, 22px, 0.02em, 10px);
+					.desciption__span{
+						color: $defultColor;
+					}
+					}
+				}
+			}
+		}
+		.pagination{
+			height: 140px;
+			position: relative;
+			bottom: 0px;
+			
+		}
 	}
 }
