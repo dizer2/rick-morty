@@ -3,6 +3,7 @@ import "./style/Characters.css"
 import Header from '../Header/Header';
 import Filter from './Filters/Filter';
 import Pagination from '@mui/material/Pagination';
+import Popup from '../UI/Popup';
 
 function Characters() {
   
@@ -11,10 +12,13 @@ function Characters() {
   const [pages, setPages] = useState();
   const [page, setPage] = useState(1);
   const [allPage, setAllPage] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+
 
   const [species, setSpecies] = useState([]);
   const [status, setStatus] = useState([]);
   const [gender, setGender] = useState([]);
+	const [popupObj, setPopupObj] = useState([]);
 
   let [thisSpecies, setThisSpecies] = useState("");
   let [thisStatus, setThisStatus] = useState("");
@@ -107,8 +111,20 @@ function Characters() {
     setThisGender('');
   }
 
+  const popupInfo = (obj) => {
+    setPopupObj(obj);
+    setIsOpen(true);
+  }
+
+
+
   return (
     <div className="characters">
+      <Popup 
+        popupObj={popupObj}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
       <Header />
       <div className="characters__filter">
         <Filter 
@@ -124,7 +140,7 @@ function Characters() {
       <div className="characters__main">
         {characters.map(item => {
           return (
-            <div key={item.id} className="characters__main-cart">
+            <div onClick={() => popupInfo(item)} key={item.id} className="characters__main-cart">
             <div className="cart__frame">
               <img className='cart__frame-img' src={item.image} alt="rick-and-morty" />
             </div>

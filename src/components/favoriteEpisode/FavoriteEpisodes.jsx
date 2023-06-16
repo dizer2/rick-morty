@@ -91,7 +91,7 @@ function FavoriteEpisodes() {
 
 
   const sortedTodo = favoriteEpisode.sort((a, b) => a.like - b.like);
-
+  console.log(sortedTodo)
 
 
   return (
@@ -105,7 +105,7 @@ function FavoriteEpisodes() {
     />
 
     <div className="favoriteEpisodes__main">
-    {sortedTodo && sortedTodo.map((item) => {          
+    {sortedTodo.map(item => {          
       return (
             <div id={item.id} key={item.id} className={item.className}>
             <div className="charapter__name-box">
