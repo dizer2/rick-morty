@@ -1,24 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Header from '../Header/Header';
 import "./style/Location.css"
 import NameFilter from '../nameFilter/nameFilter';
 import { Pagination } from '@mui/material';
+import Filter from './Filters/Filter';
 
 
 function Location() {
-  
-  const [pages, setPages] = useState();
-  const [page, setPage] = useState(1);
-  const [name, setName] = useState("");
+
   const [allName, setAllName] = useState([]);
   const [location, setLocation] = useState([])
   const [type, setType] = useState([])
-  const [names, setNames] = useState([])
+  const [dimension, setDimension] = useState([])
 
+  const [name, setName] = useState("");
+  const [thisType, setThisType] = useState('')
+  const [thisDimension, setThisDimension] = useState('')
+  const [pages, setPages] = useState();
+  const [page, setPage] = useState(1);
+  
   
   const fetchData = async () => {
     try {
-      const response = await fetch(`https://rickandmortyapi.com/api/location/?name=${name}&page=${page}`);
+      const response = await fetch(`https://rickandmortyapi.com/api/location/?name=${name}&page=${page}&type=${thisType}&dimension=${thisDimension}`);
       if (!response.ok) {
         throw new Error("Eror");
       }
@@ -45,21 +49,16 @@ function Location() {
   useEffect(() => {
     const fetchCharactersData = async () => {
       try {
-        const typeArr = [];
-        for (let i = 0; i < 7; i++) {
-          const response = await fetch(`https://rickandmortyapi.com/api/location?page=${i}`);
-          const data = await response.json();
-          console.log(data);
-
-          data.results.forEach((item) => {
-            if (!typeArr.includes(item.type)) {
-              typeArr.push(item.type);
-            }
-          });
-        }
-        console.log(typeArr)
-        setType(typeArr);
-
+        const response = await fetch(`https://rickandmortyapi.com/api/location`);
+        const data = await response.json();
+        console.log(data);
+  
+        const typeArr = data.results.map((item) => item.type);
+        const dimensionArr = data.results.map((item) => item.dimension);
+  
+        setType([...new Set(typeArr)]);
+        setDimension([...new Set(dimensionArr)]);
+  
       } catch (error) {
         console.error('Error:', error);
       }
@@ -68,20 +67,34 @@ function Location() {
     fetchCharactersData();
   }, []);
 
-
-  const changePage = (event, thisPage) => {
+  const changePage = useCallback((event, thisPage) => {
     setPage(thisPage);
-  }
-
-  const nameFilter = (event) => {
+  }, []);
+  
+  const nameFilter = useCallback((event) => {
     setPage(1);
+    setThisType('');
+    setThisDimension('');
     setName(event.target.value);
-  }
-
-  const choseNameInput = (event) => {
+  }, []);
+  
+  const choseNameInput = useCallback((event) => {
     setPage(1);
     setName(event.target.id);
-  }
+  }, []);
+  
+  const resetFilters = useCallback(() => {
+    setThisType('');
+    setThisDimension('');
+  }, []);
+  
+  const changeType = useCallback((event) => {
+    setThisType(event.target.value);
+  }, []);
+  
+  const changeDimension = useCallback((event) => {
+    setThisDimension(event.target.value);
+  }, []);
 
 
   return (
@@ -93,17 +106,15 @@ function Location() {
       choseNameInput={choseNameInput}
       allName={allName}
     />
-     {/* <div className="location_filter">
+     <div className="location__filter">
         <Filter 
-          species={species}
-          status={status}
-          gender={gender}
-          changeSpecies={changeSpecies}
-          changeStatus={changeStatus}
-          changeGender={changeGender}
-          restlFilters={restlFilters}
+          type={type}
+          dimension={dimension}
+          changeType={changeType}
+          changeDimension={changeDimension}
+          resetFilters={resetFilters}
         />
-      </div> */}
+      </div>
     <div className="location__main">
     {location.map(item => {
           return (

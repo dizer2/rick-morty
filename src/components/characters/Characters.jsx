@@ -37,6 +37,7 @@ function Characters() {
   
         for (const response of responses) {
           const data = await response.json();
+          
           data.results.forEach((item) => {
             if (!speciesArr.includes(item.species)) {
               speciesArr.push(item.species);
@@ -99,8 +100,6 @@ function Characters() {
   const changePage = (event, thisPage) => {
     setPage(thisPage);
   }
-
-
 
   const restlFilters = () => {
     setThisSpecies('');

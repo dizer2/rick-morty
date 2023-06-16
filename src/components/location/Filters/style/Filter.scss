@@ -1,0 +1,48 @@
+@import "../../../main/mixin.scss";
+@import "../../../main/variables.scss";
+
+.filter{
+	display: flex;
+	&__button{
+		width: 221px;
+		height: 63px;
+		border: none;
+		background: #B8F1FF;
+		border-radius: 10px;
+		cursor: pointer;
+		outline: none;
+		text-align: center;
+		margin: 0 25px;
+		@include display-center(center, center);
+		@include customFont($defultColor, 18px, 400,  103%, 0, 0);
+		option{
+			position: relative;
+			right: 100px;
+		}
+	}
+}
+
+@media screen and (max-width: 1245px) {
+	.filter{
+		flex-wrap: wrap;
+		@include display-center(center, center);
+		padding: 0 30px;
+		&__button{
+			width: 221px;
+			height: 63px;
+			margin: 25px;
+			@include customFont($defultColor, 18px, 400,  103%, 0, 0);
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.filter{
+		&__button{
+			width: 200px;
+			height: 60px;
+			margin: 20px;
+			@include customFont($defultColor, 16px, 400,  103%, 0, 0);
+		}
+	}
+}
